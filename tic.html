@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    input {
+      width: 100px;
+      height: 100px;
+      display: flex;
+      /* background-color: aqua; */
+      align-items: center;
+      justify-content: center;
+      outline: none;
+      border: 1px solid #ccc;
+      font-size: 40px;
+      color: #333;
+    }
+  </style>
+  <script>
+
+
+
+    var score = 1;
+    function btn1() {
+      if (score == 1) {
+
+        document.getElementById('btn1').value = 'X';
+        document.getElementById('btn1').disabled = "true";
+        score = 0;
+      }
+      else {
+        document.getElementById('btn1').value = 'O';
+        document.getElementById('btn1').disabled = "true";
+        score = 1;
+      }
+    }
+    function btn2() {
+      if (score == 1) {
+        document.getElementById('btn2').value = 'X';
+        document.getElementById('btn2').disabled = "true";
+        score = 0;
+      }
+      else {
+        document.getElementById('btn2').value = 'O';
+        document.getElementById('btn2').disabled = "true";
+        score = 1;
+      }
+
+    }
+    function btn3() {
+      if (score == 1) {
+        document.getElementById('btn3').value = 'X';
+        document.getElementById('btn3').disabled = "true";
+        score = 0;
+      }
+      else {
+        document.getElementById('btn3').value = 'O';
+        document.getElementById('btn3').disabled = "true";
+        score = 1;
+      }
+
+    }
+    function btn4() {
+      if (score == 1) {
+        document.getElementById('btn4').value = 'X';
+        document.getElementById('btn4').disabled = "true";
+        score = 0;
+      }
+      else {
+        document.getElementById('btn4').value = 'O';
+        document.getElementById('btn4').disabled = "true";
+        score = 1;
+      }
+
+    }
+    function btn5() {
+      if (score == 1) {
+        document.getElementById('btn5').value = 'X';
+        document.getElementById('btn5').disabled = "true";
+        score = 0;
+      }
+      else {
+        document.getElementById('btn5').value = 'O';
+        document.getElementById('btn5').disabled = "true";
+        score = 1;
+      }
+
+    }
+    function btn6() {
+      if (score == 1) {
+        document.getElementById('btn6').value = 'X';
+        document.getElementById('btn6').disabled = "true";
+        score = 0;
+      }
+      else {
+        document.getElementById('btn6').value = 'O';
+        document.getElementById('btn6').disabled = "true";
+        score = 1;
+      }
+
+    }
+    function btn7() {
+      if (score == 1) {
+        document.getElementById('btn7').value = 'X';
+        document.getElementById('btn7').disabled = "true";
+        score = 0;
+      }
+      else {
+        document.getElementById('btn7').value = 'O';
+        document.getElementById('btn7').disabled = "true";
+        score = 1;
+      }
+
+    }
+    function btn8() {
+      if (score == 1) {
+        document.getElementById('btn8').value = 'X';
+        document.getElementById('btn8').disabled = "true";
+        score = 0;
+      }
+      else {
+        document.getElementById('btn8').value = 'O';
+        document.getElementById('btn8').disabled = "true";
+        score = 1;
+      }
+
+    }
+    function btn9() {
+      if (score == 1) {
+        document.getElementById('btn9').value = 'X';
+        document.getElementById('btn9').disabled = "true";
+        score = 0;
+      }
+      else {
+        document.getElementById('btn9').value = 'O';
+        document.getElementById('btn9').disabled = "true";
+        score = 1;
+      }
+
+    }
+    function winner() {
+      var b1 = document.getElementById('btn1').value;
+      var b2 = document.getElementById('btn2').value;
+      var b3 = document.getElementById('btn3').value;
+      var b4 = document.getElementById('btn4').value;
+      var b5 = document.getElementById('btn5').value;
+      var b6 = document.getElementById('btn6').value;
+      var b7 = document.getElementById('btn7').value;
+      var b8 = document.getElementById('btn8').value;
+      var b9 = document.getElementById('btn9').value;
+
+      if ((b1 == 'X' && b2 == 'X' && b3 == 'X') ||
+        (b4 == 'X' && b5 == 'X' && b6 == 'X') ||
+        (b7 == 'X' && b8 == 'X' && b9 == 'X') ||
+        (b1 == 'X' && b4 == 'X' && b7 == 'X') ||
+        (b2 == 'X' && b5 == 'X' && b8 == 'X') ||
+        (b3 == 'X' && b6 == 'X' && b9 == 'X') ||
+        (b1 == 'X' && b5 == 'X' && b9 == 'X') ||
+        (b3 == 'X' && b5 == 'X' && b7 == 'X')) {
+        document.getElementById('message').innerHTML = ' player1 Winner';
+
+        for (let i = 1; i <= 9; i++) {
+          document.getElementById(`btn${i}`).disabled = 'true';
+        }
+      }
+      else if (
+        (b1 == 'O' && b2 == 'O' && b3 == 'O') ||
+        (b4 == 'O' && b5 == 'O' && b6 == 'O') ||
+        (b7 == 'O' && b8 == 'O' && b9 == 'O') ||
+        (b1 == 'O' && b4 == 'O' && b7 == 'O') ||
+        (b2 == 'O' && b5 == 'O' && b8 == 'O') ||
+        (b3 == 'O' && b6 == 'O' && b9 == 'O') ||
+        (b1 == 'O' && b5 == 'O' && b9 == 'O') ||
+        (b3 == 'O' && b5 == 'O' && b7 == 'O')) {
+        document.getElementById("message").innerHTML = 'Player2 winner';
+
+        for (let i = 1; i <= 9; i++) {
+          document.getElementById(`btn${i}`).disabled = 'true';
+        }
+      }
+      else if ((b1 == 'X' || b1 == 'O') &&
+        (b2 == 'X' || b2 == 'O') &&
+        (b3 == 'X' || b3 == 'O') &&
+        (b4 == 'X' || b4 == 'O') &&
+        (b5 == 'X' || b5 == 'O') &&
+        (b6 == 'X' || b6 == 'O') &&
+        (b7 == 'X' || b7 == 'O') &&
+        (b8 == 'X' || b8 == 'O') &&
+        (b9 == 'X' || b9 == 'O')) {
+
+        document.getElementById("message").innerHTML = 'The match was Tye';
+      }
+      else {
+        if (score == 1) {
+          document.getElementById('message').innerHTML = 'Player 1 Turn';
+        }
+        else {
+          document.getElementById('message').innerHTML = 'Player 2 Turn';
+        }
+      }
+    }
+    function reset() {
+      location.reload();
+
+    }
+
+  </script>
+</head>
+
+<body>
+  <table>
+    <tr>
+      <td>
+        <input type="button" id="btn1" onclick="btn1(); winner();">
+        <input type="button" id="btn2" onclick="btn2(); winner();">
+        <input type="button" id="btn3" onclick="btn3(); winner();">
+      </td>
+      <td>
+        <input type="button" id="btn4" onclick="btn4(); winner();">
+        <input type="button" id="btn5" onclick="btn5(); winner();">
+        <input type="button" id="btn6" onclick="btn6(); winner();">
+      </td>
+      <td>
+        <input type="button" id="btn7" onclick="btn7(); winner();">
+        <input type="button" id="btn8" onclick="btn8(); winner();">
+        <input type="button" id="btn9" onclick="btn9(); winner();">
+
+      </td>
+    </tr>
+  </table>
+  <div id="message"></div>
+  <button onclick="reset()"> reset</button>
+</body>
+
+</html>
